@@ -1,1 +1,0 @@
-alert("Arquivo externo 2");
