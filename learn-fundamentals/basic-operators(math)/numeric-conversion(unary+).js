@@ -4,15 +4,15 @@
 
 // número não afetado
 let x = 1;
-alert( +x ); // 1
+//alert( +x ); // 1
 
 // não-números convertidos
-alert( +true ); // 1
-alert( +"" );   // 0
+//alert( +true ); // 1
+//alert( +"" );   // 0
 
 // faz a mesma coisa que Number(...), mas é mais curto.
 
 // convertendo strings em números
 let apples = "2"
 let oranges = "3"
-alert(+apples + +oranges) // 5
+//alert(+apples + +oranges) // 5

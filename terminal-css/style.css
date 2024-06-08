@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#console{
+    background-color: #000000;
+    border: 3px solid gray;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+#console_title{
+    background-color: #777;
+    width: 99.%;
+    height: 20px;
+    padding:3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#console_body{
+    color: #FFFFFF;
+    padding-left: 5px;
+}
