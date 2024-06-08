@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
 </head>
 <body>
-    <script src="comparisons.js"></script>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Comparando números</h3>
+            <script>
+                let x = 7;
+                let y = 14;
 
-    <script src="string-comparison.js"></script>
+                log(`${x} > ${y} (${x > y})`)
+                log(`${x} < ${y} (${x < y})`)
+                log(`${x} == ${y} (${x == y})`)
+                log(`${x} == ${x} (${x == x})`)
+                log(`${x} === ${y} (${x === y})`)
+                log(`${x} === ${x} (${x === x})`)
+                log(`${x} != ${y} (${x != y})`)
+                log(`${x} != ${x} (${x != x})`)
+            </script>
 
-    <script src="comparison-different-types.js"></script>
+            <h3 style="color: greenyellow;">Comparando com strings</h3>
+            <script>
+                let s = "7";
 
-    <script src="strict-equality.js"></script>
+                log(`"${s}" < ${y} (${s < y})`)
+                log(`"${s}" == ${x} (${s == x})`)
+                log(`"${s}" === ${x} (${s === x})`)
+                log(`"${s}" != ${x} (${s != x})`)
+            </script>
 
-    <script src="comparison-null-undefined.js"></script>
+            <h3 style="color: greenyellow;">Apenas strings</h3>
+            <script>
+                let str1 = "A";
+                let str2 = "Z";
+                let str3 = "Nicolas";
+                let str4 = "Moraes";
+
+                log(`"${str1}" > "${str2}" (${str1 > str2})`)
+                log(`"${str3}" > "${str4}" (${str3 > str4})`)
+            </script>
+        </div>
+    </div>
+
+
 </body>
 </html>
