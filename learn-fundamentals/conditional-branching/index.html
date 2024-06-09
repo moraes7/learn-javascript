@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
     <title>Document</title>
-
-    <script src="if.js"></script>
-
-    <script src="else.js"></script>
-
-    <script src="else-if.js"></script>
-
-    <script src="ternary.js"></script>
 </head>
 <body>
-    
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Condicionais</h3>
+            <script>
+                function idade() {
+                    let age = prompt("Qual é a sua idade? ")
+
+                    if(age <= 13) {
+                        log("Você é uma criança!")
+                    } else if(age >= 14 && age < 18) {
+                        log("Você é um adolescente!")
+                    } else if (age >= 18 && age < 60) {
+                        log("Você é um adulto!")
+                    } else {
+                        log("Você é um idoso!")
+                    }
+
+                    let cnh = (age >= 18) ? "Permitido tirar a CNH" : "Proibído tirar CNH"
+                    log(cnh)
+                }
+
+                idade();
+            </script>
+        </div>
+    </div>
+
 </body>
 </html>
