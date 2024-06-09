@@ -22,12 +22,16 @@
                     log("O restaurante está aberto")
                 }
 
-                if(day == "Quarta" && day == "Sábado") {
+                if(day == "Quarta" || day == "Sábado") {
                     log("O prato principal do dia é feijoada")
-                } else if (day == "Segunda" && day == "Sexta") {
+                } else if (day == "Segunda" || day == "Sexta") {
                     log("O prato principal do dia é peixe empanado")
                 } else {
                     log("O prato principal do dia é costela de porco")
+                }
+
+                if(day == "Quarta" && hour >= 12 && hour <= 14) {
+                    log("Promoção especial de feijoada no almoço")
                 }
             </script>
 			</div>
