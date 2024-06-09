@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script src="while.js"></script>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Loop WHILE</h3>
+            <script>
+                let contagem = 10;
+                
+                while (contagem > 0) {
+                    log(contagem)
+                    contagem--
+                }
+                log("Feliz Ano Novo!")
+            </script>
 
-    <script src="for.js"></script>
+            <h3 style="color: greenyellow;">Loop FOR</h3>
+            <p>Contando ate 10 de 2 em 2</p>
+            <script>
+                for(let x = 0; x <= 10; x+=2){
+                    log(x)
+                }
+                
+            </script>
+        </div>
+    </div>	
 
-    <script src="break.js"></script>
-
-    <script src="continue.js"></script>
+    
 </body>
 </html>
