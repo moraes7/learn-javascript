@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
     <title>Document</title>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Switch</h3>
+        </div>
+    </div>	
+
+    <script>
+        let soma = prompt("Qual o resultado da soma 2 + 2? 5, 4 ou 3?" );
+
+        switch(soma) {
+            case "5":
+                log("Errou!");
+                break
+            case "4":
+                log("Acertou!");
+                break
+            case "3":
+                log("Errou!");
+                break
+            default:
+                log("Não sei a resposta");
+        }
+    </script>
 </head>
 <body>
-    <script src="switch.js"></script>
-</body>
+    
 </html>
