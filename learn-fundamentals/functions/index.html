@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script src="function-declaration.js"></script>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Functions</h3>
+            <script>
+                function soma(n1, n2) {
+                    let result = n1 + n2
+                    return `A soma entre ${n1} e ${n2} é: ${result}`
+                }
+                log(soma(7, 7))
 
-    <script src="parameters.js"></script>
-
-    <script src="return.js"></script>
-
-    <script src="function-expressions.js"></script>
-
-    <script src="arrow-function.js"></script>
+                // arrow function
+                const multiplicar = (x, y) => `A multiplicação entre ${x} e ${y} é: ${x * y}`;
+                log(multiplicar(7, 7));
+            </script>
+        </div>
+    </div>	
 </body>
 </html>
