@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script src="OR.js"></script>
+    <div id="console">
+			<div id="console_title">CONSOLE</div>
+			<div id="console_body">
+			<h3 style="color: greenyellow;"></h3>
+            <script>
+                let day = prompt("Que dia é hoje?")
+                let hour = prompt("Digite o horário atual: ")
 
-    <script src="AND.js"></script>
+                if(hour < 10 || hour > 18) {
+                    log("O restaurante está fechado")
+                } else {
+                    log("O restaurante está aberto")
+                }
 
-    <script src="NOT.js"></script>
+                if(day == "Quarta" && day == "Sábado") {
+                    log("O prato principal do dia é feijoada")
+                } else if (day == "Segunda" && day == "Sexta") {
+                    log("O prato principal do dia é peixe empanado")
+                } else {
+                    log("O prato principal do dia é costela de porco")
+                }
+            </script>
+			</div>
+		</div>	
 </body>
 </html>
