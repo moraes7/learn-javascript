@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+        
+        </div>
+    </div>	
+    <script>
+       class Person {
+
+        age = 0;
+
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+
+        }
+
+        sayHi() {
+            return `Olá, meu nome é ${this.name} e tenho ${this.age} anos`
+        }
+       }
+
+       class Student extends Person {
+        
+        constructor(name, age, course) {
+            super(name, age)
+            this.course = course
+        }
+
+        sayHi() {
+            return `Olá, meu nome é ${this.name}, tenho ${this.age} anos e curso ${this.course}.`
+        }
+       }
+
+       let person = new Student("Nicolas", 28, "Análise e Desenvolvimento de Sistemas")
+
+       log(person.sayHi());
+    </script>
+</body>
+</html>
