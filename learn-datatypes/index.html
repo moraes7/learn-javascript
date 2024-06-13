@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3>Array</h3>
+            <script>
+                let carros = ["BMW", " Ferrari", " Mercedes"];
+                let x = 1
+
+                log(`Lista de carros: ${carros}`)
+
+                log(`1. Pegando a ferrari no array: ${carros[1]}`)
+
+                carros[1] = " Audi"
+                log(`2. Trocando a Ferrari pelo Audi: ${carros}`)
+
+                carros.push( " Volvo")
+                log(`3. Adicionando o Volvo na lista: ${carros}`)
+
+                log(`4. Itens no array: ${carros.length}`)
+            </script>
+
+            <h3>Loop em arrays</h3>
+            <script>
+                function paleta() {
+                let cores = ["roxo", "azul", "verde", "branco"]
+                cores.push("preto")
+
+                for(let i in cores) {
+                log(cores[i])
+                }
+                return cores
+                }
+                log(paleta())
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
