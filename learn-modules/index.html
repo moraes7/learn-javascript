@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        
+        <div id="console_body" style="display: grid;">
+            <h3 style="color: greenyellow;">Times Brasileirão Serie A 2024</h3>
+            
+            <ul id="lista"></ul>
+        </div>
+    </div>
+
+    <script type="module">
+        import {serieA, listaTimes} from "./module.js"
+
+        listaTimes(serieA, "lista")
+    </script>
+    
+</body>
+</html>
