@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/terminal-css/style.css">
+    <script src="/common/console.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Carrinho de compras</h3>
+        </div>
+    </div>
+
+    <script>
+        const p1 = {
+            name: "Computador",
+            price: "3000.0",
+            quantity: 2
+        }
+
+        const Product = function(name, price, quantity) {
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+
+        Product.prototype.total = function() {
+            return `Total a pagar: ${this.price * this.quantity}`
+        }
+
+        Product.prototype.add = function(amount) {
+            this.quantity += amount; 
+        }
+
+        Product.prototype.remove = function(amount) {
+            if(this.quantity >= amount) {
+                this.quantity -= amount;
+            }
+        }
+
+        Product.prototype.label = function() {
+            return `Produto: ${this.name} Preço: ${this.price} Quantidade: ${this.quantity}`
+        }
+
+        const p2 = new Product("Monitor", 800.0, 10);
+
+        log(p2.label())
+        log(p2.total())
+    </script>
+</body>
+</html>
