@@ -8,11 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="console">
-        <div class="console_title">CONSOLE</div>
-        <div class="console_body">
-            
+    <div id="console">
+        <div id="console_title">CONSOLE</div>
+        <div id="console_body">
+            <h3 style="color: greenyellow;">Parâmetro Rest</h3>
         </div>
     </div>
+
+    <script>
+        function clube(nome, ...titulos) {
+        log(`Nome do clube: ${nome}`)
+        log(`Títulos: ${titulos}`)
+       }
+
+       clube("Sociedade Esportiva Palmeiras", "12 Brasileiros", " 3 Libertadores", " 26 Paulistas", " 4 Copas do Brasil");
+    </script>
 </body>
 </html>
