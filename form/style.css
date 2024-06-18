@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 30px;
+}
+
+#form {
+    width: 500px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+#formName input, #formEmail input, #formPassword input {
+    width: 500px;
+    height: 25px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+
+#select #option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 340px;
+}
+
+#btn input[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #284eee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
