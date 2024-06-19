@@ -4,7 +4,7 @@ body {
 }
 
 #form {
-    width: 500px;
+    width: 600px;
     margin: auto;
     padding-top: 30px;
 }
@@ -25,10 +25,10 @@ form div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 340px;
+    gap: 300px;
 }
 
-#btn input[type="submit"] {
+button {
     width: 100px;
     padding: 10px;
     border: none;

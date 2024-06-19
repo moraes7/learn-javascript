@@ -4,51 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/form/style.css">
-    <script src="script.js"></script>
     <title>Formulário</title>
 </head>
 <body>
     <div id="form">
+        <h1>Formulário</h1>
         <form action="" method="post">
             <div id="formName">
                 <label for="iname">Nome</label><br>
-                <input type="text" name="name" id="iname" required>
+                <input type="text" name="txtName" id="iname" required>
             </div>
 
             <div id="formEmail">
                 <label for="iemail">Email</label> <br>
-                <input type="email" name="email" id="iemail" required>
+                <input type="email" name="txtEmail" id="iemail" required>
             </div>
 
             <div id="formPassword">
                 <label for="ipassword">Senha</label> <br>
-                <input type="password" name="password" id="ipassword" required>
+                <input type="password" name="txtPassword" id="ipassword" required>
             </div>
 
             <div id="select">
                 <div id="option">
                     <div>
-                        <select name="select" id="iselec">
-                            <option value="" selected>--- Tipo de usuário ---</option>
-                            <option value="iadm">Admin</option>
-                            <option value="iuser">Usuário</option>
+                        <select name="optSelect" id="iselect">
+                            <option value="" selected>--- Tipo de Usuário</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Usuário">Usuário</option>
                         </select>
                     </div>
 
                     <div>
-                        <input type="checkbox" name="activate" id="iactave" checked>
-                        <label for="iactave">Ativar?</label>
+                        <input type="checkbox" name="optActive" id="iactive" checked>
+                        <label for="iactive">Ativar?</label>
                     </div>
                 </div>
 
             </div>
-
-            <div id="btn">
-                <input type="submit" value="Cadastrar">
-            </div>
+    
+            <button type="button" onclick="saveUser(txtName.value, txtEmail.value, txtPassword.value, optSelect.value, optActive.checked)">Cadastrar</button>        
         </form>
 
-        <table id="table">
+        <table id="userTable">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -58,37 +56,9 @@
                     <th>Ativo</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                </tr>
-                <tr>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                </tr>
-                <tr>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                </tr>
-                <tr>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td>
-                </tr>
-            </tbody>
         </table>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
