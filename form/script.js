@@ -5,21 +5,21 @@ function getUserData() {
                 "password": "",
                 "userType": "",
                 "active": false
-        };
+        }
 
-        let name = document.getElementById('iname');
+        let name = document.getElementById('iname').value;
         user.name = name;
 
-        let email = document.getElementById('iemail');
+        let email = document.getElementById('iemail').value;
         user.email = email;
 
-        let password = document.getElementById('ipassword');
+        let password = document.getElementById('ipassword').value;
         user.password = password;
 
-        let userType = document.getElementById('iselect');
+        let userType = document.getElementById('iselect').value;
         user.userType = userType;
 
-        let active = document.getElementById('iactive');
+        let active = document.getElementById('iactive').checked;
         user.active = active;
 
         return user; 
@@ -38,20 +38,20 @@ function addTableRow(user) {
         let cell_actions = row.insertCell(5);
 
         cell_name.innerHTML = user.name;
-        cell_email.innerHTML = email;
-        cell_password.innerHTML = password;
-        cell_userType.innerHTML = user_type;
-        cell_isactive.innerHTML = isActive ? "Sim" : "Não"
+        cell_email.innerHTML = user.email;
+        cell_password.innerHTML = user.password;
+        cell_userType.innerHTML = user.userType;
+        cell_isactive.innerHTML = user.active ? "Sim" : "Não";
 
-        cell_actions.innerHTML = '<a href="#" onclick="editUser('+qtdRows+')">Editar</a> || <a href="#" onclick="deleteUser('+qtdRows+')">Excluir</a> '
+        cell_actions.innerHTML = '<a href="#" onclick="editUser(' +qtdRows+ ')">Editar</a> | <a href="#" onclick="deleteUser(' +qtdRows+ ')">Excluir</a>';
 
 
 }
 
 function saveUser() {
         const user = getUserData();
-        addRow(user);
-         
+        addTableRow(user);
+
 }
 
 
