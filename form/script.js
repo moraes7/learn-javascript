@@ -43,7 +43,7 @@ function addTableRow(user) {
         cell_userType.innerHTML = user.userType;
         cell_isactive.innerHTML = user.active ? "Sim" : "Não";
 
-        cell_actions.innerHTML = '<a href="#" onclick="editUser(' +qtdRows+ ')">Editar</a> | <a href="#" onclick="deleteUser(' +qtdRows+ ')">Excluir</a>';
+        cell_actions.innerHTML = '<a href="#" onclick="editUser(' +qtdRows+ ')">Editar</a> | <a href="#" onclick="deleteUser(this)">Excluir</a>';
 
 
 }
@@ -52,6 +52,11 @@ function saveUser() {
         const user = getUserData();
         addTableRow(user);
 
+}
+
+function deleteUser(delUser) {
+        let delete_user = delUser.parentNode.parentNode.rowIndex;
+        document.getElementById('userTable').deleteRow(delete_user)
 }
 
 
