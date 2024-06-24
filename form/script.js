@@ -43,7 +43,7 @@ function addTableRow(user) {
         cell_userType.innerHTML = user.userType;
         cell_isactive.innerHTML = user.active ? "Sim" : "Não";
 
-        cell_actions.innerHTML = '<a href="#" onclick="editUser(' +qtdRows+ ')">Editar</a> | <a href="#" onclick="deleteUser(this)">Excluir</a>';
+        cell_actions.innerHTML = '<a href="#" onclick="editUser(this)">Editar</a> | <a href="#" onclick="deleteUser(this)">Excluir</a>';
 
 
 }
@@ -59,6 +59,27 @@ function deleteUser(delUser) {
         document.getElementById('userTable').deleteRow(delete_user)
 }
 
+function editUser(edit) {
+        let edit_user = edit.parentNode.parentNode;
+
+        let cell_name = edit_user.cells[0];
+        let cell_email = edit_user.cells[1];
+        let cell_password = edit_user.cells[2];
+        let cell_userType = edit_user.cells[3];
+        let cell_isactive = edit_user.cells[4];
+
+        let name_input = prompt("Nome:", cell_name.innerHTML);
+        let email_input = prompt("Email:", cell_email.innerHTML);
+        let password_input = prompt("Senha:", cell_password.innerHTML);
+        let userType_input = prompt("Tipo de usuário:", cell_userType.innerHTML);
+        let active_input = prompt("Ativo?", cell_isactive.innerHTML);
+
+        cell_name.innerHTML = name_input;
+        cell_email.innerHTML = email_input;
+        cell_password.innerHTML = password_input;
+        cell_userType.innerHTML = userType_input;
+        cell_isactive.innerHTML = active_input;
+}
 
 
 
