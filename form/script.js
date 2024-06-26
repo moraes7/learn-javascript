@@ -66,6 +66,7 @@ function saveUser() {
         }
 
         document.getElementById('formUser').reset();
+        document.getElementById('userId').value = "";
 
 }
 
@@ -93,11 +94,11 @@ function editUser(edit){
 
         loadForm({
           "id": edit_user.id,
-          "name": edit_user.cells[0],
-          "email": edit_user.cells[1],
-          "password": edit_user.cells[2],
-          "userType": edit_user.cells[3],
-          "active": (edit_user.cells[4] == "Sim")?true:false
+          "name": edit_user.cells[0].innerHTML,
+          "email": edit_user.cells[1].innerHTML,
+          "password": edit_user.cells[2].innerHTML,
+          "userType": edit_user.cells[3].innerHTML,
+          "active": (edit_user.cells[4].innerHTML == "Sim")?true:false
         });
 }
 
