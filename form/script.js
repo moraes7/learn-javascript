@@ -1,11 +1,17 @@
 function getUserData() {
         const user = {
+                "id": "",
                 "name": "",
                 "email": "",
                 "password": "",
                 "userType": "",
                 "active": false
         }
+
+        let iuserId = document.getElementById('userId');
+        if(iuserId) {
+          user.id = iuserId.value
+        } 
 
         let name = document.getElementById('iname').value;
         user.name = name;
@@ -29,6 +35,7 @@ function addTableRow(user) {
         let table = document.getElementById('userTable');
         let qtdRows = table.rows.length;
         let row = table.insertRow(qtdRows);
+        row.setAttribute("id", "tr-userid-" + qtdRows);
 
         let cell_name = row.insertCell(0);
         let cell_email = row.insertCell(1);
@@ -43,45 +50,61 @@ function addTableRow(user) {
         cell_userType.innerHTML = user.userType;
         cell_isactive.innerHTML = user.active ? "Sim" : "Não";
 
-        cell_actions.innerHTML = '<a href="#" onclick="editUser(this)">Editar</a> | <a href="#" onclick="deleteUser(this)">Excluir</a>';
+        cell_actions.innerHTML = '<a href="#" onclick="editUser(this)">Editar</a> | <a href="#" value="Delete" onclick="deleteUser(this)">Excluir</a>'
 
+     
 
 }
 
 function saveUser() {
         const user = getUserData();
-        addTableRow(user);
 
+        if(user.id) {
+          updateTableRow(user);
+        }else {
+          addTableRow(user);
+        }
+
+        document.getElementById('formUser').reset();
+
+}
+
+function updateTableRow(user) {
+        let row = document.getElementById(user.id);
+
+        row.cells[0].innerHTML = user.name;
+        row.cells[1].innerHTML = user.email;
+        row.cells[2].innerHTML = user.password;
+        row.cells[3].innerHTML = user.userType;
+        row.cells[4].innerHTML = user.active ? "Sim" : "Não";
+}
+
+function loadForm(user) {
+        document.getElementById('userId').value = user.id;
+        document.getElementById('iname').value = user.name;
+        document.getElementById('iemail').value = user.email;
+        document.getElementById('ipassword').value = user.password;
+        document.getElementById('iselect').value;
+        document.getElementById('iactive').checked = user.active;
+}
+
+function editUser(edit){
+        let edit_user = edit.parentNode.parentNode;
+
+        loadForm({
+          "id": edit_user.id,
+          "name": edit_user.cells[0],
+          "email": edit_user.cells[1],
+          "password": edit_user.cells[2],
+          "userType": edit_user.cells[3],
+          "active": (edit_user.cells[4] == "Sim")?true:false
+        });
 }
 
 function deleteUser(delUser) {
         let delete_user = delUser.parentNode.parentNode.rowIndex;
         document.getElementById('userTable').deleteRow(delete_user)
 }
-
-function editUser(edit) {
-        let edit_user = edit.parentNode.parentNode;
-
-        let cell_name = edit_user.cells[0];
-        let cell_email = edit_user.cells[1];
-        let cell_password = edit_user.cells[2];
-        let cell_userType = edit_user.cells[3];
-        let cell_isactive = edit_user.cells[4];
-
-        let name_input = prompt("Nome:", cell_name.innerHTML);
-        let email_input = prompt("Email:", cell_email.innerHTML);
-        let password_input = prompt("Senha:", cell_password.innerHTML);
-        let userType_input = prompt("Tipo de usuário:", cell_userType.innerHTML);
-        let active_input = prompt("Ativo?", cell_isactive.innerHTML);
-
-        cell_name.innerHTML = name_input;
-        cell_email.innerHTML = email_input;
-        cell_password.innerHTML = password_input;
-        cell_userType.innerHTML = userType_input;
-        cell_isactive.innerHTML = active_input;
-}
-
-
 
 
 
