@@ -57,3 +57,9 @@ Esse projeto contém códigos que foram criados com objetivo de compreensão do 
 | Exercício         | Descrição                     | Pasta ou Arquivo                      |
 |-------------------|-------------------------------|---------------------------------------|
 | Error handling    | Tratamento de erro usando try e catch  | [index.html](learn-error-handling/index.html) |
+
+### Form
+
+| Exercício         | Descrição                     | Pasta ou Arquivo                      |
+|-------------------|-------------------------------|---------------------------------------|
+| Form              | Formulário feito com HTML, CSS e JavaScript  | [index.html](form/script.js) |
